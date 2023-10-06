@@ -125,8 +125,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# run fastfetch
+fastfetch
+
+# configure RPi
+alias rpissh='cd /media/hannorsmith/boot && touch ssh'
+
 # run powertop
 alias ptop='sudo powertop'
 
 # edit grub quickly
-alias grubedit='sudo vim /etc/default/grub'
+alias grubedit='sudo nvim /etc/default/grub'
+
